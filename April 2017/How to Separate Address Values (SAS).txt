@@ -5,3 +5,5 @@ City = scan(Address,  -3 );  /* Creates a variable column for the city variable 
 Zip = scan(Address, -1, '  ‘ );  /* Creates a variable column for the zip variable */
 State = scan(Address,  -2 );  /* Creates a variable column for the state variable */
 Run;
+
+
