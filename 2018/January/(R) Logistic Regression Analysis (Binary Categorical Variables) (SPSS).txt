@@ -51,4 +51,4 @@ correlationmatrix <- cor(CancerModel)
 
 # Download and Enable Package: "car" # 
 
-vif(CancerModelLog)
+vif(CancerModelLog)  
