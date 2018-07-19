@@ -37,7 +37,7 @@ exp(-0.38924)
 
 # Smoking # 
 
-exp(2.54387) 
+exp(2.54387)  
 
 # Output # 
 
