@@ -1,0 +1,54 @@
+# Model Creation # 
+
+Age <- c(55, 45, 33, 22, 34, 56, 78, 47, 38, 68, 49, 34, 28, 61, 26) 
+
+Obese <- c(1,0,0,0,1,1,0,1,1,0,1,1,0,1,0) 
+
+Smoking <- c(1,0,0,1,1,1,0,0,1,0,0,1,0,1,1) 
+
+Cancer <- c(1,0,0,1,0,1,0,0,1,1,0,1,1,1,0) 
+
+CancerModel <- data.frame(Age, Obese, Smoking, Cancer) 
+
+# Summary Creation and Output # 
+
+CancerModelLog <- glm(Cancer~ Age + Obese + Smoking, family=binomial) 
+
+summary(CancerModelLog) 
+
+# Generate Nagelkerke R Squared # 
+
+# Download and Enable Package: "BaylorEdPsych" # 
+
+PseudoR2(CancerModelLog) 
+
+# Calculate Exp(B) # 
+# (Intercept) # 
+
+exp(-2.34431) 
+
+# Age # 
+
+exp(0.02984) 
+
+# Obese # 
+
+exp(-0.38924) 
+
+# Smoking # 
+
+exp(2.54387) 
+
+# Output # 
+
+# Utilize VIF() and COR() in lieu of The Homer and Lameshow Test # 
+
+# Generate Correlation Matrix # 
+
+correlationmatrix <- cor(CancerModel)
+
+# Generate Variance Influence Factor # 
+
+# Download and Enable Package: "car" # 
+
+vif(CancerModelLog)
